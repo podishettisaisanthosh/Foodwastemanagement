@@ -1,0 +1,62 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+        <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBR9kPyhPrlljnBfs9vYa29IFNs8-T1KsI",
+        authDomain: "wastefoodmanagement-aa290.firebaseapp.com",
+        projectId: "wastefoodmanagement-aa290",
+        storageBucket: "wastefoodmanagement-aa290.appspot.com",
+        messagingSenderId: "1042960532935",
+        appId: "1:1042960532935:web:672c6eaeb56c47bb0f05e2",
+        measurementId: "G-R610TRMZ9G"
+      };
+      firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+            </script>
+        <form>
+        <input type="text" placeholder="restaurent name" id="name">
+        <input type="text" placeholder="place" id="place">
+        <input type="text" placeholder="food type" id="ft">
+        <input type="text" placeholder="quantity" id="quantity1">
+        <input type="text" placeholder="phone number" id="pn">
+        <input type="text" placeholder="email" id="emails">
+
+    </form>
+    <button onclick="restaurent()">send request</button>
+   
+    <script>
+
+    function restaurent(){
+ 
+     
+        var m1=document.getElementById("name").value;
+        
+        var m2=document.getElementById("place").value;
+        var m3=document.getElementById("ft").value;
+        
+        var m4=document.getElementById("quantity1").value;
+        var m5=document.getElementById("pn").value;
+        var m6=document.getElementById("emails").value;
+       firebase.database().ref('logindetails').child("restaurent").push().set(
+           {
+      name:m1,
+      place:m2,
+      foodname:m3,
+      quantity:m4,
+      contact:m5,
+      email:m6
+   
+       }
+       );
+       alert("successfully request has been sent to ngo");
+   }
+</script>
+
+    </body>
+</html>

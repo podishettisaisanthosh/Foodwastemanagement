@@ -1,0 +1,228 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+        <title>main page</title>
+        <style>
+            body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+nav ul li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+nav ul li:hover {
+    color: black;
+}
+
+nav ul li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+nav ul li span:nth-child(1) {
+    --n: 1;
+}
+
+nav ul li span:nth-child(2) {
+    --n: 2;
+}
+
+nav ul li span:nth-child(3) {
+    --n: 3;
+}
+
+nav ul li span:nth-child(4) {
+    --n: 4;
+}
+.sai34{
+    position:absolute;
+height:100%;
+width:100%;
+
+
+}
+.bottom{
+    position:absolute;
+height:1%;
+width:100%;
+bottom:0;
+}
+.upd{
+    border-style: groove;
+    border-radius: 50;
+    border-color: aquamarine;
+    color:purple;
+    text-align: center;
+    background-color: aqua;
+
+}
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+ 
+}
+.centering {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.imagess{
+    width: 50px;
+    height: 40px;
+}
+            </style>
+            <meta name="viewport" content="width=500, initial-scale=1" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+<body>
+    <div class="sai34">
+    <h1  style="COLOR:YELLOW;text-align:center;" ><img class="imagess" src="foodicon.jpg">FOOD WASTE MANAGEMENT</h1>
+    <hr color="wheat">
+    <h1 class="upd">New updates</h1>
+    <p style="color:white"><marquee>We are trying to launch our app very soon...</marquee></p>
+    <p style="color:orange">In this system, we have tried to reduce restaurant food wastage by giving waste
+        food to NGOs. NGOs will raise a request, in case of any leftover food restaurants
+        have. This request is sent to the restaurant manager of that particular restaurant.
+        The NGO Manager then approves the request and assigns it to one of the NGO
+        employees for takeaway and forwards the request to the restaurant. The leftover
+        food at the restaurant can be given to NGOs at the end of the day. </p>
+    <img src="foodwastemanagementphoto.jpg" class="centering">
+    </div>
+
+<nav>
+    <ul>
+      <li>
+  <a href="registerpage.html">DONOR
+        <span></span><span></span><span></span><span></span>
+    </a>
+      </li>
+   
+      
+      <li>
+        <a href="ngo_registerpage.HTML">  NGO
+        <span></span><span></span><span></span><span></span>
+        </a>
+      </li>
+ 
+    </ul>
+  </nav>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+  <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyBR9kPyhPrlljnBfs9vYa29IFNs8-T1KsI",
+  authDomain: "wastefoodmanagement-aa290.firebaseapp.com",
+  projectId: "wastefoodmanagement-aa290",
+  storageBucket: "wastefoodmanagement-aa290.appspot.com",
+  messagingSenderId: "1042960532935",
+  appId: "1:1042960532935:web:672c6eaeb56c47bb0f05e2",
+  measurementId: "G-R610TRMZ9G"
+};
+firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+      </script>
+      <br><br><br>
+      <div class="bottom">  
+        <br><br><br>
+      <h1 style="color:pink;text-align: center;">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ USAGE OF WEBSITE ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h1>
+     <h2 style="color: whitesmoke">How To Use Our Website(guide)</h2>
+      <h2 style="color: whitesmoke">Role Of Restaurant</h2>
+      <p style="color: whitesmoke">
+        <b>Register:</b> User can register using personal details.</p>
+        <p style="color: whitesmoke">
+        <b>Login:</b> User can login in his personal account using id and password</p>
+        <p style="color: whitesmoke">
+        <b>Food:</b>
+        Add new food items and send request to ngo 
+        (left over food)
+        </p>
+        <p style="color: whitesmoke">
+        <b>Photo:</b>
+         For identifying their restaurant they can upload their Photo
+         Restaurent owners can select their image of their restaurent photo and check and after they can upload 
+         their photo under the respective details
+        </p>
+        <h2 style="color: whitesmoke">Role Of NGO</h2>
+               <p style="color: whitesmoke">
+        <b>Register:</b> User can register using personal details.</p>
+        <p style="color: whitesmoke">
+        <b>Login:</b> User can login in his personal account using id and password</p>
+        <p style="color: whitesmoke">
+        <b>Details:</b>
+        View restaurant requests
+        </p>
+        <p style="color: whitesmoke">
+        <b>Photo:</b>
+         Ngo can retrieve the photo by specifying the id of the item
+        </p>
+        <p style="color: whitesmoke"> <b>History:View Orders history</b>
+         
+           <p style="color: whitesmoke"> Accepted</p>
+           <p style="color: whitesmoke">  Pending</p>
+           <p style="color: whitesmoke"> Confirm</p>
+           
+        </p>
+        <h1 style="color:slateblue;text-align: center;">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ CONCLUSION ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h1>
+        <p style="color: whitesmoke">This project entitled “Web-based application for food waste management” presents a complete overview of the implementation of a website that helps both Donors and NGOs. This website helps in collecting the leftover/excess food from the Donors and distributing the same to those who are in need. This web based application works properly and responsive to the users with proper retrieval from the database. Also there is a help menu available in all user logins which is answered by the admin. In this way this website comes with various features for the effective consumption of waste food by the needy people.</p>
+      <h1 style="color:skyblue;text-align: center;">~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ WEBSITE OWNER ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~</h1>
+      <footer style="color:whitesmoke">
+        
+        <p>Copyright © 2021 foodwastemanagement | All Rights Reserved . </p>
+            <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;CHENNAI<br>
+            <i class="fa fa-phone" aria-hidden="true"></i> +91 6302427505
+            <br><i class="fas fa-envelope-square"></i>&nbsp;saisanthosh2234@gmail.com	
+            <br><button style="position:absolute;height:7%;padding:1%;background-color:black;box-shadow:2px 3px 4px;border-radius:15%"><a href="https://wa.me/+916302427505" style="color:white"><i class="fa fa-whatsapp" style="color:green"></i>&nbsp;Whatsapp 1</a></button>
+       </footer>
+      </div>
+</body>
+</html>

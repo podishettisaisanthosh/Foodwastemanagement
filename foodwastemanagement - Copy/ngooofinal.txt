@@ -1,0 +1,338 @@
+<html>
+    <head>
+        <title>ngo</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .labs{
+      display: inline-block;
+      width: 100px;
+    }
+   </style>
+<style>
+
+    ul li {
+      
+      margin: 5px;
+      
+    }
+    
+    ul {
+      background:black;
+      padding: 50px;
+    
+     
+    }
+    
+    
+    body {
+        margin:100 400 55px 40;
+     
+    }
+    
+    .nav {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 55px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+        display: flex;
+        overflow-x: auto;
+    }
+    
+    .nav__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        min-width: 50px;
+        overflow: hidden;
+        white-space: nowrap;
+        font-family: sans-serif;
+        font-size: 13px;
+        color: #444444;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+        transition: background-color 0.1s ease-in-out;
+    }
+    
+    .nav__link:hover {
+        background-color: #eeeeee;
+    }
+    
+    .nav__link--active {
+        color: #009578;
+    }
+    
+    .nav__icon {
+        font-size: 18px;
+    }
+
+            body{
+                background-image: url(https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured.jpg);
+            }
+            .noc{
+                border-style:groove;
+                border-color:rgba(red, green, blue, alpha)
+               
+            }
+            .noc{
+               background-image: url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000);
+                border-color:purple;
+                margin-top: 50;
+                margin-left: 0;
+    margin-bottom: 100;
+    margin-right: 150;
+    text-align:center;
+        border-radius: 50px;
+        
+            }
+    
+    
+            .M{
+                background-image: url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000);
+        border-style:ridge;
+        text-align:center; 
+        border-style:inset;
+        border-color:rgb(#ff00007c, rgb(132, 230, 132), rgb(20, 20, 70));
+        text-align:center;
+     
+        background-image: url(hg.gif);
+
+    
+    font-family: Arial, Helvetica, sans-serif;
+    
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+      box-shadow: 5px 5px 8px orangered, 10px 10px 8px lightgray,10px 10px 8px green;
+    }
+    
+    
+    @font-face {
+       font-family: myFirstFont;
+       src: url(sansation_light.woff);
+    }
+    
+    * {
+       font-family: myFirstFont;
+    }
+    
+    
+        </style>
+        
+<style>
+    
+    .a1
+{
+position:absolute;
+height:10%;
+width:100%;
+background-color:wheat;
+background-image:url('https://64.media.tumblr.com/6f1272000ded0b209890415071480682/tumblr_njkpuw3nab1r2geqjo1_540.gifv');
+}
+    .a4
+{
+
+ 
+            margin: 250 100 10px 120;
+        
+width:70%;
+left:10%;
+padding:1.2%;
+
+background-image:url('https://image.freepik.com/free-vector/unicorn-background-with-rainbow-mesh_121461-367.jpg');
+
+background-repeat:no-repeat;
+background-size:cover;
+}
+</style>
+    </head>
+    <body >
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+        <script>
+                      const firebaseConfig = {
+        apiKey: "AIzaSyBR9kPyhPrlljnBfs9vYa29IFNs8-T1KsI",
+        authDomain: "wastefoodmanagement-aa290.firebaseapp.com",
+        projectId: "wastefoodmanagement-aa290",
+        storageBucket: "wastefoodmanagement-aa290.appspot.com",
+        messagingSenderId: "1042960532935",
+        appId: "1:1042960532935:web:672c6eaeb56c47bb0f05e2",
+        measurementId: "G-R610TRMZ9G"
+      };
+      firebase.initializeApp(firebaseConfig);
+          firebase.analytics(); 
+      </script>
+
+        <div class="a1">
+
+       
+      <h1 style="COLOR:YELLOW;text-align:center" >NGO TEAM</h1>
+        
+        </div>
+        <br>
+        <br>
+        <br>
+ 
+        <div class="a4">
+           
+            <fieldset style="padding:20px;border:1px solid silver"><legend style="background-color:silver;color:white;">requests</legend>
+            
+            <aside>
+            
+                <article style="background-color:cyan;box-shadow:5px 5px gray;color:black;padding:10px;;border:2px solid black">
+            <br>
+           
+            <ul id="list" class="noc">
+                
+        
+
+             </ul>
+            </details>
+            </article></aside>
+        </ul>
+            </fieldset>
+         
+            </div>
+
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Control Panel</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      
+                 
+                      <label class="labs">identity:</label> 
+                      <input type="text" id="identitymod"><br>
+                    </div>
+            
+                    <div class="modal-footer">
+             
+                      <button  id="acceptmod" type="button" class="btn btn-success" onclick="acceptstd()"> ACCEPT REQUEST</button>
+                      <button  id="declinemod" type="button" class="btn btn-danger" onclick="declinestd()">DECLINE REQUEST</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           
+            <script>
+var studentNo;
+function FetchAllData()
+                        {
+                            firebase.database().ref('logindetails').child("restaurent").once('value',function(snapshot){
+                snapshot.forEach(
+                function(ChildSnapshot)
+                {
+                  studentNo=0;
+                    var n =ChildSnapshot.val().name;
+                   var s =ChildSnapshot.val().place;
+                   var p =ChildSnapshot.val().foodname;
+                   var pl =ChildSnapshot.val().quantity;
+                   var o =ChildSnapshot.val().contact;
+                   var c=ChildSnapshot.val().email;
+                   var i=ChildSnapshot.val().identity;
+            
+                
+                addItemsToList(n,s,p,pl,o,c,i);
+                
+                }
+                );
+                
+                
+                });
+                
+                
+                            
+                         
+                
+                
+                        }
+                        window.onload = FetchAllData;
+                    var stdList=[];    
+                var stdNo=0;
+                function addItemsToList(name,place,foodname,quantity,contact,email,identity){
+                    var ul=document.getElementById('list');
+                    var header=document.createElement('h2');          
+                    var _name=document.createElement('li');
+                    var _place=document.createElement('li');
+                    var _foodname=document.createElement('li');
+                    var _quantity=document.createElement('li');
+                    var _email=document.createElement('li');
+                    var _identity=document.createElement('li');
+                    var button=document.createElement('h1');
+                    stdList.push([name,place,foodname,quantity,contact,email,identity]);
+                    header.innerHTML='<hr><hr><i class="fa fa-user" style="font-size:36px;color:red"></i><br>NGO REQUEST:   '+(++stdNo)
+                 
+                  _name.innerHTML='NAME:'+name;
+                  _place.innerHTML='PLACE:'+place;
+                  _foodname.innerHTML='FOODNAME:'+foodname;
+                  _quantity.innerHTML='QUANTITY:'+quantity;
+                  _email.innerHTML='email:'+email;
+                  _identity.innerHTML='identity:'+identity;
+                  
+                  ul.appendChild(header);
+                  ul.appendChild(_name);
+                  ul.appendChild(_place);
+                  ul.appendChild(_foodname);
+                  ul.appendChild(_quantity);
+                  ul.appendChild(_email);
+                  ul.appendChild(_identity);
+                  ul.appendChild(button)
+                  var ControlDiv=document.createElement("div");
+   
+  
+
+  ControlDiv.innerHTML='<button type="button" class="btn btn-primary my-2 m1-2" data-toggle="modal" data-target="#exampleModalCenter" onclick="Filltboxes('+studentNo+')">EDIT RECORD</button>'
+  
+  ul.appendChild(ControlDiv)
+                        }
+                      
+
+ 
+
+ 
+function acceptstd(){
+var ids=document.getElementById('identitymod').value;
+
+firebase.database().ref('logindetails').child("restaurent").child(ids).remove();
+alert("request accepted")
+
+firebase.database().ref('logindetails').child("accepted").push().set(
+           {
+accepted:identities
+       }
+       );
+}
+function declinestd(){
+  var ids=document.getElementById('identitymod').value;
+  firebase.database().ref('logindetails').child("restaurent").child(ids).remove();
+  alert("request declined")
+  firebase.database().ref('logindetails').child("declined").push().set(
+           {
+declined:identities
+       }
+       );
+}
+       
+                
+                
+                </script>   
+    </body>
+</html>

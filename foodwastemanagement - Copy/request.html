@@ -1,0 +1,215 @@
+<html>
+    <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        ul li {
+          
+          margin: 5px;
+          
+        }
+        
+        ul {
+          background:black;
+          padding: 50px;
+        
+         
+        }
+        
+        
+        body {
+            margin: 50 400 55px 20;
+        }
+        
+        .nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            height: 55px;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            display: flex;
+            overflow-x: auto;
+        }
+        
+        .nav__link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            min-width: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            font-family: sans-serif;
+            font-size: 13px;
+            color: #444444;
+            text-decoration: none;
+            -webkit-tap-highlight-color: transparent;
+            transition: background-color 0.1s ease-in-out;
+        }
+        
+        .nav__link:hover {
+            background-color: #eeeeee;
+        }
+        
+        .nav__link--active {
+            color: #009578;
+        }
+        
+        .nav__icon {
+            font-size: 18px;
+        }
+        
+                body{
+                    background-image: url(https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured.jpg);
+                }
+                .noc{
+                    border-style:groove;
+                    border-color:rgba(red, green, blue, alpha)
+                   
+                }
+                .noc{
+                   background-image: url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000);
+                    border-color:purple;
+                    margin-top: 50;
+                    margin-left: 0;
+        margin-bottom: 100;
+        margin-right: 150;
+        text-align:center;
+            border-radius: 50px;
+            
+                }
+                .M{
+                    background-image: url(https://img.freepik.com/free-vector/abstract-blue-geometric-shapes-background_1035-17545.jpg?w=2000);
+            border-style:ridge;
+            text-align:center; 
+            border-style:inset;
+            border-color:rgb(#ff00007c, rgb(132, 230, 132), rgb(20, 20, 70));
+            text-align:center;
+         
+            background-image: url(hg.gif);
+
+        
+        font-family: Arial, Helvetica, sans-serif;
+        
+          text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+          box-shadow: 5px 5px 8px orangered, 10px 10px 8px lightgray,10px 10px 8px green;
+        }
+        
+        
+        @font-face {
+           font-family: myFirstFont;
+           src: url(sansation_light.woff);
+        }
+        
+        * {
+           font-family: myFirstFont;
+        }
+        
+        
+            </style>
+        </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+        <script>
+                      const firebaseConfig = {
+        apiKey: "AIzaSyBR9kPyhPrlljnBfs9vYa29IFNs8-T1KsI",
+        authDomain: "wastefoodmanagement-aa290.firebaseapp.com",
+        projectId: "wastefoodmanagement-aa290",
+        storageBucket: "wastefoodmanagement-aa290.appspot.com",
+        messagingSenderId: "1042960532935",
+        appId: "1:1042960532935:web:672c6eaeb56c47bb0f05e2",
+        measurementId: "G-R610TRMZ9G"
+      };
+      firebase.initializeApp(firebaseConfig);
+          firebase.analytics();  
+        </script>
+        <nav class="nav">
+            <a href="ngooo.html" class="nav__link">
+             
+               
+              <i class="fa-solid fa-building-ngo" style="font-size:24px"></i>
+            <span class="nav__text">NGO</span>
+            </a>
+    
+            <a href="request.html" class="nav__link">
+         
+                <i style="font-size:24px" class="fa">&#xf00c;</i>
+              <span class="nav__text">ACCEPTED</span>
+            </a>
+            <a href="decline.html" class="nav__link">
+              <i style="font-size:24px" class="fa">&#xf00d;</i>
+              <span class="nav__text" >DECLINED</span>
+            
+            </a>
+          </nav>
+            <div >
+                <ul id="list" class="noc">
+                    
+                </ul>
+                </div>
+    
+<script>
+
+
+var stdNo=0;
+function addItemsToList(identities12){
+    var ul=document.getElementById('list');
+    var header=document.createElement('h2');
+    var _identities12=document.createElement('li');
+   
+
+    header.innerHTML='<hr><hr><i class="fa fa-user" style="font-size:36px;color:red"></i><br>ACCEPTED REQUEST:   '+(++stdNo)
+  _identities12.innerHTML='accepted id:'+identities12;
+
+  
+  ul.appendChild(header);
+  ul.appendChild(_identities12);
+
+        }
+        function FetchAllData()
+        {
+firebase.database().ref('logindetails').child("accepted").once('value',function(snapshot){
+snapshot.forEach(
+function(ChildSnapshot)
+{
+let identities12 =ChildSnapshot.val().accepted;
+
+addItemsToList(identities12);
+
+}
+);
+
+
+});
+
+
+            
+         
+
+
+        }
+window.onload(FetchAllData())
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+    </body>
+
+</html>

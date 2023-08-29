@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <title>dummy image</title>
+        <style>
+            img{
+                height: 200px;width: 200px;border:2px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-storage.js"></script>
+       
+          
+                  
+
+        IMAGE NAME<input type="text" id="namebox">
+        <img id="myimg"><label id="UpProgress"></label><br><br>
+<button id="select">SELECT IMAGE</button>
+<button id="upload">upload IMAGE</button>
+<button id="retrieve">retrive IMAGE</button>
+<script id="MainScript">
+    var ImgName,ImgUrl;
+    var files=[];
+    var reader;
+
+    const firebaseConfig = {
+              apiKey: "AIzaSyBR9kPyhPrlljnBfs9vYa29IFNs8-T1KsI",
+              authDomain: "wastefoodmanagement-aa290.firebaseapp.com",
+              projectId: "wastefoodmanagement-aa290",
+              storageBucket: "wastefoodmanagement-aa290.appspot.com",
+              messagingSenderId: "1042960532935",
+              appId: "1:1042960532935:web:672c6eaeb56c47bb0f05e2",
+              measurementId: "G-R610TRMZ9G"
+            };
+            firebase.initializeApp(firebaseConfig);
+                
+
+document.getElementById("select").onclick=function(e){
+    var input=document.createElement('input');
+    input.type='file';
+  
+    input.onchange = e => {
+        files=e.target.files;
+        reader=new FileReader();
+        reader.onload=function(){
+            document.getElementById("myimg").src=reader.result;
+        }
+        reader.readAsDataURL(files[0])
+    }
+    input.click();
+}
+
+
+
+document.getElementById("upload").onclick=function(){
+    ImgName = document.getElementById('namebox').value;
+    var uploadTask = firebase.storage().ref('Images/'+ImgName+".png").put(files[0]);
+  uploadTask.on('state_changed',function(snapshot){
+var progress=(snapshot.bytesTransferred/snapshot.totalBytes)*100;
+document.getElementById('UpProgress').innerHTML='Upload'+progress+'%';
+  },
+
+  function(error){
+    alert("error in the uploading image"+error);
+  },
+  function(){
+    uploadTask.snapshot.ref.getDownloadURL().then(function(url){
+ImgUrl = url;
+  
+firebase.database().ref('logindetails').child('restaurent').child('Pictures/'+ImgName).set(
+        {
+            Name:ImgName,
+Link:ImgUrl
+  });
+  alert("image added successfully")
+  }
+  );
+});
+
+
+}
+
+document.getElementById("retrieve").onclick=function(){
+    ImgName=document.getElementById('namebox').value;
+    firebase.database().ref('logindetails').child('restaurent').child('Pictures/'+ImgName).on('value',function(snapshot){
+        document.getElementById('myimg').src=snapshot.val().Link;
+    });
+}
+
+</script>
+    </body>
+</html>
